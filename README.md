@@ -24,10 +24,10 @@
 | assets/images/ | 이미지 |
 
 ## 아임웹 적용
-1. 이 폴더 전체를 `subideok/lucina` 리포 **main 브랜치 루트**에 업로드
+1. 이 폴더 전체를 `subideok/lucina3` 리포 **main 브랜치 루트**에 업로드
 2. `imweb-code-widget.txt` 내용을 아임웹 **코드 위젯 1개**에 붙여넣기
 3. 섹션 순서를 바꾸려면 widget 안의 `<script>` 줄 순서만 바꾸면 됩니다. 섹션을 빼려면 그 줄을 지우면 됩니다.
-4. 수정 후 반영이 늦으면 jsDelivr 캐시 → https://purge.jsdelivr.net/gh/subideok/lucina@main/파일명 접속
+4. 수정 후 반영이 늦으면 jsDelivr 캐시 → https://purge.jsdelivr.net/gh/subideok/lucina3@main/파일명 접속
 
 ## 자주 고치는 곳
 - 수강료 · 모집 상태 → lucina-courses.js

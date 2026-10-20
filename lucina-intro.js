@@ -1,9 +1,12 @@
 /* LUCINA B안 · lucina-intro.js — 이 스크립트가 놓인 자리에 섹션을 그립니다 (lucina-core.js 다음에 로드) */
 (function () {
   var me = document.currentScript;
-  var base = window.LUCINA_BASE || "https://cdn.jsdelivr.net/gh/subideok/lucina@main/";
+  var base = window.LUCINA_BASE || "https://cdn.jsdelivr.net/gh/subideok/lucina3@main/";
   var html = "<!-- LUCINA B · 01b 루시나 소개 — 이곳이 어떤 곳인지 먼저 알려 주는 섹션 -->\n<section class=\"lb-root lb-sec lb-sec--white\" id=\"lb-intro\" aria-labelledby=\"lb-intro-title\">\n  <div class=\"lb-wrap lb-intro\">\n    <div class=\"lb-intro__photos\">\n      <figure class=\"lb-intro__ph lb-intro__ph--a\"><div class=\"lb-img\"><img src=\"assets/images/class-scene.png\" alt=\"강사가 화면을 보며 카드 의미를 설명하는 수업\" loading=\"lazy\"></div></figure>\n      <figure class=\"lb-intro__ph lb-intro__ph--b\"><div class=\"lb-img\"><img src=\"assets/images/class-scene-2.png\" alt=\"수강생들이 카드를 펼치고 교재에 리딩을 적는 수업\" loading=\"lazy\"></div></figure>\n      <p class=\"lb-intro__cap\">루시나아카데미 소그룹 수업 현장</p>\n    </div>\n    <div class=\"lb-intro__text\">\n      <p class=\"lb-label\">루시나아카데미</p>\n      <h2 class=\"lb-h2\" id=\"lb-intro-title\">타로를 배우고, 상담하고,<br>가르치는 곳입니다.</h2>\n      <p class=\"lb-intro__lead\">김세정 원장이 직접 가르치는 타로심리 교육 공간입니다. 소그룹 수업에서 자체 교재로 배우고, 배운 내용을 실제 상담과 강의로 이어갑니다.</p>\n      <ol class=\"lb-intro__list\">\n        <li><span>01</span><div><b>교육</b><small>취미반부터 전문강사반까지 단계별 수업</small><p>취미반부터 타로심리상담 전문강사반까지 단계별로 배웁니다.</p></div></li>\n        <li><span>02</span><div><b>상담</b><small>김세정 원장이 직접 하는 1:1 타로 상담</small><p>루시나타로에서 원장 상담을 받을 수 있습니다. 루시나 상담사 상담은 준비 중입니다.</p></div></li>\n        <li><span>03</span><div><b>타로 상담사</b><small>리딩반에서 실제 상담 후 상담사로 활동</small><p>리딩반에서 실제 고객을 상담하고, 원장 검증을 거쳐 루시나 상담사·강사로 활동합니다.</p></div></li>\n      </ol>\n    </div>\n  </div>\n</section>\n".split('src="assets/images/').join('src="' + base + 'assets/images/');
   var box = document.createElement('div'); box.className = 'lucina-b-intro'; box.innerHTML = html;
-  if (me && me.parentNode) me.parentNode.insertBefore(box, me); else document.body.appendChild(box);
+  var root = document.getElementById('lucina-b-root');
+  if (root) root.appendChild(box);
+  else if (me && me.parentNode && me.parentNode !== document.head) me.parentNode.insertBefore(box, me);
+  else document.body.appendChild(box);
   if (window.LucinaB) window.LucinaB.refresh();
 })();

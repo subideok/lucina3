@@ -1,7 +1,7 @@
 /* LUCINA B안 · lucina-core.js — 공통 스타일 + 동작 (가장 먼저 1회 로드)
    이미지 주소 기준: window.LUCINA_BASE (없으면 jsDelivr 기본값) */
 (function () {
-  window.LUCINA_BASE = window.LUCINA_BASE || "https://cdn.jsdelivr.net/gh/subideok/lucina@main/";
+  window.LUCINA_BASE = window.LUCINA_BASE || "https://cdn.jsdelivr.net/gh/subideok/lucina3@main/";
   if (!document.getElementById('lucina-b-font')) {
     var l = document.createElement('link'); l.id = 'lucina-b-font'; l.rel = 'stylesheet';
     l.href = 'https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&display=swap';
