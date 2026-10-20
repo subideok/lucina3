@@ -1,4 +1,4 @@
-/* LUCINA B안 · lucina-nav.js — 이 스크립트가 놓인 자리에 섹션을 그립니다 (lucina-core.js 다음에 로드) */
+/* LUCINA B안 · lucina-nav.js — 섹션 렌더 (lucina-core.js 다음에 로드) */
 (function () {
   var me = document.currentScript;
   var base = window.LUCINA_BASE || "https://cdn.jsdelivr.net/gh/subideok/lucina3@main/";
