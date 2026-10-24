@@ -5,7 +5,16 @@
     <nav class="lb-nav__menu" id="lb-menu" aria-label="주요 메뉴">
       <a href="#" data-lb-link="home">루시나 소개</a>
       <a href="#" data-lb-link="tarot" class="is-on" aria-current="page">타로 상담</a>
-      <a href="#" data-lb-link="academy">아카데미</a>
+      <div class="lb-nav__dd">
+        <a href="#" data-lb-link="academy" class="lb-nav__dt">아카데미</a>
+        <div class="lb-nav__sub">
+          <a href="#" data-lb-link="hobby">취미반</a>
+          <a href="#" data-lb-link="expert">전문가반</a>
+          <a href="#" data-lb-link="reading">리딩반</a>
+          <a href="#" data-lb-link="teacher">강사반</a>
+          <a href="#" data-lb-link="oneday">원데이클래스</a>
+        </div>
+      </div>
       <a href="#" data-lb-link="online">온라인 강의</a>
       <a href="#" data-lb-link="faq">FAQ</a>
       <a href="#" data-lb-link="visit">오시는 길</a>
@@ -149,7 +158,7 @@
 <footer class="lb-root lb-foot">
   <div class="lb-wrap lb-foot__grid">
     <div><p class="lb-foot__logo">LUCINA</p><p>루시나타로 · 루시나아카데미<br>부산 남구 대연동 타로심리 교육과 상담</p></div>
-    <dl class="lb-foot__dl"><div><dt>이메일</dt><dd><a href="mailto:lucinataro@gmail.com">lucinataro@gmail.com</a></dd></div><div><dt>주소</dt><dd>부산 남구 대연동 푸르지오써밋 상가 2층 212호</dd></div></dl>
+    <dl class="lb-foot__dl"><div><dt>전화</dt><dd><a href="tel:050713206228">0507-1320-6228</a></dd></div><div><dt>이메일</dt><dd><a href="mailto:lucinataro@gmail.com">lucinataro@gmail.com</a></dd></div><div><dt>주소</dt><dd>부산 남구 대연동 푸르지오써밋 상가 2층 212호</dd></div></dl>
     <div class="lb-foot__org"><p class="lb-foot__ot">기관 강의</p><p>기업·고등학교·대학교 특강, 상담심리 전공자 대상 강의</p><a href="mailto:lucinataro@gmail.com?subject=%EA%B8%B0%EA%B4%80%20%EA%B0%95%EC%9D%98%20%EB%AC%B8%EC%9D%98">기관 강의 문의 →</a></div>
     <ul class="lb-foot__links">
       <li><a href="https://blog.naver.com/lucina__" target="_blank" rel="noopener">블로그</a></li>
@@ -165,4 +174,10 @@
   <a href="#" data-lb-link="academy#lb-cta">수강 상담</a>
   <a href="https://naver.me/5o0tePjF" target="_blank" rel="noopener">상담 예약</a>
 </div>
-
+<!-- LUCINA · 오른쪽 하단 플로팅 메뉴 · 카카오톡 주소는 LUCINA_LINKS.kakao 에 입력 -->
+<div class="lb-root lb-float" aria-label="빠른 연결">
+  <a class="lb-float__btn lb-float__btn--cafe" href="https://cafe.naver.com/LucinaAcademy" target="_blank" rel="noopener" aria-label="네이버 카페"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9.5h12v4.5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5z" fill="#fff"/><path d="M16 11h1.6a2.4 2.4 0 0 1 0 4.8H16" fill="none" stroke="#fff" stroke-width="1.8"/><path d="M8 4.2c-.9.9.9 1.8 0 2.8M12 4.2c-.9.9.9 1.8 0 2.8" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg><span>네이버 카페</span></a>
+  <a class="lb-float__btn lb-float__btn--insta" href="https://www.instagram.com/lucina_dreamer/" target="_blank" rel="noopener" aria-label="인스타그램"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="#fff" stroke-width="1.9"/><circle cx="12" cy="12" r="4" fill="none" stroke="#fff" stroke-width="1.9"/><circle cx="17.2" cy="6.8" r="1.2" fill="#fff"/></svg><span>인스타그램</span></a>
+  <a class="lb-float__btn lb-float__btn--kakao" href="https://pf.kakao.com/_BCAxaX/chat" data-lb-ext="kakao" target="_blank" rel="noopener" aria-label="카카오톡 상담"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5c-5 0-9 3.2-9 7.2 0 2.6 1.7 4.8 4.3 6.1l-1 3.6c-.1.4.3.7.6.5l4.2-2.8 .9.1c5 0 9-3.2 9-7.2s-4-7.5-9-7.5z" fill="#3A1D1D"/><text x="12" y="12.9" font-family="Arial,sans-serif" font-size="5.2" font-weight="700" fill="#FEE500" text-anchor="middle">TALK</text></svg><span>카카오톡 상담</span></a>
+  <a class="lb-float__btn lb-float__btn--tel" href="tel:050713206228" aria-label="전화하기 0507-1320-6228"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z" fill="#fff"/></svg><span>전화 0507-1320-6228</span></a>
+</div>

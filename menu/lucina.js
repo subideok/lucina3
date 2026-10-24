@@ -4,9 +4,10 @@
   var TALK_URL = '';
   var MAIL = 'lucinataro@gmail.com';
   /* [페이지 주소] 아임웹 메뉴 주소를 받으면 여기만 교체 */
-  var LINKS = window.LUCINA_LINKS || { home: '/', about: '/', tarot: '/tarot', academy: '/academy', online: '/online', faq: '/faq', visit: '/visit' };
+  var LINKS = window.LUCINA_LINKS || { home: '/', about: '/', tarot: '/tarot', academy: '/academy', hobby: '/academy-hobby', expert: '/academy-expert', reading: '/academy-reading', teacher: '/academy-teacher', oneday: '/academy-oneday', online: '/online', faq: '/faq', visit: '/visit', kakao: 'https://pf.kakao.com/_BCAxaX/chat' };
   function init() {
     d.querySelectorAll('[data-lb-link]').forEach(function (a) { var v = a.getAttribute('data-lb-link').split('#'); if (LINKS[v[0]] != null) a.href = LINKS[v[0]] + (v[1] ? '#' + v[1] : ''); });
+    d.querySelectorAll('[data-lb-ext]').forEach(function (a) { var u = LINKS[a.getAttribute('data-lb-ext')]; if (u) a.href = u; });
     d.querySelectorAll('[data-lb-talk]').forEach(function (a) { if (TALK_URL) a.href = TALK_URL; else { a.href = '#lb-cta'; a.removeAttribute('target'); } });
     d.querySelectorAll('[data-lb-tabs]').forEach(function (box) {
       if (box.__lb) return; box.__lb = 1;

@@ -1470,3 +1470,45 @@
 .lb-root .lb-nav__menu a{color:var(--ink,#2B2433)}
 .lb-root .lb-nav__menu a.is-on{color:var(--navy);font-weight:600}
 @media (min-width:900px){.lb-root .lb-nav__menu a.is-on{box-shadow:inset 0 -2px 0 var(--navy);padding:6px 0}}
+
+/* v40 · 아카데미 하위 메뉴 */
+.lb-root .lb-nav__dd{position:relative;display:flex;flex-direction:column}
+.lb-root .lb-nav__sub{display:flex;flex-direction:column}
+.lb-root .lb-nav__sub a{padding-left:16px;font-size:14.5px;color:var(--mute)}
+.lb-root .lb-nav__sub a.is-on{color:var(--navy);font-weight:600}
+@media (max-width:899px){.lb-root .lb-nav__menu{max-height:calc(100vh - 72px);overflow-y:auto}}
+@media (min-width:900px){
+  .lb-root .lb-nav__dd{flex-direction:row;align-items:center}
+  .lb-root .lb-nav__dt::after{content:"";width:6px;height:6px;margin:-4px 0 0 7px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg)}
+  .lb-root .lb-nav__dt{align-items:center}
+  .lb-root .lb-nav__sub{position:absolute;top:calc(100% + 18px);left:50%;min-width:172px;padding:8px 0;background:var(--white);border:1px solid var(--line);box-shadow:0 14px 32px rgba(61,43,92,.12);opacity:0;visibility:hidden;transform:translate(-50%,6px);transition:opacity .18s,transform .18s,visibility .18s}
+  .lb-root .lb-nav__sub::before{content:"";position:absolute;left:0;right:0;top:-20px;height:20px}
+  .lb-root .lb-nav__dd:hover .lb-nav__sub,.lb-root .lb-nav__dd:focus-within .lb-nav__sub{opacity:1;visibility:visible;transform:translate(-50%,0)}
+  .lb-root .lb-nav__menu .lb-nav__sub a{display:flex;align-items:center;min-height:44px;padding:0 20px;white-space:nowrap;box-shadow:none}
+  .lb-root .lb-nav__menu .lb-nav__sub a:hover{background:var(--beige);color:var(--navy)}
+}
+/* v40 · 아카데미 과정 페이지 탭 */
+.lb-root .lb-ctab{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}
+.lb-root .lb-ctab a{display:inline-flex;align-items:center;min-height:44px;padding:0 18px;border:1px solid var(--line);background:var(--white);color:var(--ink);font-size:15px}
+.lb-root .lb-ctab a:hover{border-color:var(--brown);color:var(--brown)}
+.lb-root .lb-ctab a.is-on{background:var(--navy);border-color:var(--navy);color:#fff}
+.lb-root .lb-cph{min-height:360px}
+/* v40 · 오른쪽 하단 플로팅 메뉴 */
+.lb-root.lb-float{background:transparent!important;border:0;box-shadow:none;padding:0;left:auto;top:auto;width:auto;max-width:max-content;align-items:flex-end;position:fixed;right:clamp(16px,2.4vw,32px);bottom:clamp(16px,2.4vw,32px);z-index:61;display:flex;flex-direction:column;gap:10px}
+.lb-root .lb-float__btn{position:relative;display:flex;align-items:center;justify-content:center;width:56px;height:56px;border-radius:50%;box-shadow:0 6px 18px rgba(43,37,54,.18);transition:transform .2s}
+.lb-root .lb-float__btn:hover{transform:translateY(-2px)}
+.lb-root .lb-float__btn svg{width:34px;height:34px;display:block}
+.lb-root .lb-float__btn--cafe{background:#03C75A}
+.lb-root .lb-float__btn--insta{background:radial-gradient(circle at 30% 107%,#FDF497 0%,#FD5949 45%,#D6249F 62%,#285AEB 92%)}
+.lb-root .lb-float__btn--kakao{background:#FEE500}
+.lb-root .lb-float__btn--kakao svg{width:40px;height:40px}
+.lb-root .lb-float__btn--tel{background:var(--navy)}
+.lb-root .lb-float__btn span{position:absolute;right:calc(100% + 10px);top:50%;transform:translateY(-50%);padding:6px 12px;background:var(--navy);color:#fff;font-size:13.5px;font-weight:500;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .2s}
+.lb-root .lb-float__btn:hover span,.lb-root .lb-float__btn:focus-visible span{opacity:1}
+@media (max-width:900px){
+  .lb-root.lb-float{right:12px;bottom:calc(84px + env(safe-area-inset-bottom));gap:8px}
+  .lb-root .lb-float__btn{width:48px;height:48px}
+  .lb-root .lb-float__btn svg{width:30px;height:30px}
+  .lb-root .lb-float__btn--kakao svg{width:36px;height:36px}
+  .lb-root .lb-float__btn span{display:none}
+}
