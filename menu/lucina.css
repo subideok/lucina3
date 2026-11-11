@@ -1541,3 +1541,7 @@
 /* v32 · 글꼴 Pretendard 통일 */
 .lb-root{--f:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;font-family:var(--f)}
 .lb-root h1,.lb-root h2,.lb-root h3,.lb-root p,.lb-root a,.lb-root button,.lb-root input,.lb-root textarea{font-family:var(--f)}
+
+/* v33 · 플로팅 메뉴 — 첫 화면에서는 숨기고 스크롤하면 나타남 */
+.lb-root.lb-float{opacity:0;visibility:hidden;transform:translateY(14px);pointer-events:none;transition:opacity .3s,transform .3s,visibility 0s .3s}
+.lb-root.lb-float.is-show{opacity:1;visibility:visible;transform:none;pointer-events:auto;transition:opacity .3s,transform .3s,visibility 0s}

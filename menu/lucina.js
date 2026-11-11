@@ -76,7 +76,7 @@
       }, 3500);
     });
   }
-  function navOver() { d.querySelectorAll('.lb-nav--over').forEach(function (n) { n.classList.toggle('is-scrolled', (window.scrollY || d.documentElement.scrollTop) > 40); }); }
+  function navOver() { var y = window.scrollY || d.documentElement.scrollTop; d.querySelectorAll('.lb-nav--over').forEach(function (n) { n.classList.toggle('is-scrolled', y > 40); }); d.querySelectorAll('.lb-float').forEach(function (f) { f.classList.toggle('is-show', y > window.innerHeight * 0.6); }); }
   window.addEventListener('scroll', navOver, { passive: true });
   var _init = init; init = function () { _init(); carousel(); navOver(); };
   window.LucinaB = { refresh: init };
