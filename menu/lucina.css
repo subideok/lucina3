@@ -1,3 +1,4 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css');
 /* LUCINA B안 퍼플 · b-purple.css — 3색: 딥 퍼플 #3D2B5C / 라벤더 #C9B4EA / 아이보리 #FAF8F4 — 모든 스타일은 .lb-root 안에서만 적용 */
 .lb-root{--bg:#FAF8F4;--white:#FFFFFF;--beige:#ECE5F3;--navy:#3D2B5C;--brown:#6E4C9C;--ink:#2B2536;--mute:#5E5868;--line:#E5DFEA;
   --f:"Noto Sans KR",-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;--wrap:1200px;--pad:clamp(20px,5vw,64px);--sec:clamp(80px,10vw,144px);
@@ -1512,3 +1513,31 @@
   .lb-root .lb-float__btn--kakao svg{width:36px;height:36px}
   .lb-root .lb-float__btn span{display:none}
 }
+
+/* v30 · 라운드 통일 — 버튼 10px · 사진 14px · 카드 16px */
+.lb-root .lb-btn,.lb-root .lb-hb__btn,.lb-root .lb-why__btn,.lb-root .lb-crs__btn,.lb-root .lb-form input,.lb-root .lb-form textarea,.lb-root .lb-form select,.lb-root .lb-form button{border-radius:10px}
+.lb-root .lb-img,.lb-root .lb-ph,.lb-root .lb-prof__card{border-radius:14px;overflow:hidden}
+.lb-root .lb-rv2,.lb-root .lb-rv2__hero,.lb-root .lb-rvz__card,.lb-root .lb-svc__card,.lb-root .lb-two__card,.lb-root .lb-learn li,.lb-root .lb-path__step,.lb-root .lb-prof__box,.lb-root .lb-goal2 li{border-radius:16px;overflow:hidden}
+.lb-root .lb-ent__item,.lb-root .lb-intro__list li{border-radius:16px}
+#lb-more.lb-root .lb-svc__card{overflow:visible;border-radius:0}
+.lb-root .lb-tp__ph{border-radius:0}
+.lb-root .lb-tp__body .lb-btn{border-radius:999px}
+
+/* v31 · 홈 상단 메뉴 — 영상 위에 겹침, 스크롤하면 흰 배경 */
+.lb-root.lb-nav--over{margin-bottom:-73px;transition:background-color .3s,border-color .3s,box-shadow .3s}
+.lb-root.lb-nav--over:not(.is-scrolled):not(.is-open){background:transparent;border-bottom-color:transparent;-webkit-backdrop-filter:none;backdrop-filter:none}
+.lb-root.lb-nav--over:not(.is-scrolled):not(.is-open) .lb-nav__logo{color:#FAF8F4}
+.lb-root.lb-nav--over:not(.is-scrolled):not(.is-open) .lb-nav__logo small{color:rgba(250,248,244,.8)}
+.lb-root.lb-nav--over:not(.is-scrolled):not(.is-open) .lb-nav__toggle i{background:#FAF8F4}
+@media (min-width:900px){
+  .lb-root.lb-nav--over:not(.is-scrolled) .lb-nav__menu>a:not(.lb-nav__cta),.lb-root.lb-nav--over:not(.is-scrolled) .lb-nav__dt{color:#FAF8F4}
+  .lb-root.lb-nav--over:not(.is-scrolled) .lb-nav__menu>a:not(.lb-nav__cta):hover,.lb-root.lb-nav--over:not(.is-scrolled) .lb-nav__dt:hover{color:#fff;opacity:.75}
+  .lb-root.lb-nav--over:not(.is-scrolled) .lb-nav__menu a.is-on{color:#FAF8F4;box-shadow:inset 0 -2px 0 #FAF8F4}
+  .lb-root.lb-nav--over:not(.is-scrolled) .lb-nav__cta{background:rgba(255,255,255,.12);border:1px solid rgba(250,248,244,.6);color:#FAF8F4!important;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+}
+.lb-root.lb-nav--over.is-scrolled,.lb-root.lb-nav--over.is-open{background:#fff;border-bottom-color:var(--line);box-shadow:0 6px 24px rgba(61,43,92,.06)}
+.lb-root .lb-nav__cta{border-radius:10px}
+
+/* v32 · 글꼴 Pretendard 통일 */
+.lb-root{--f:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;font-family:var(--f)}
+.lb-root h1,.lb-root h2,.lb-root h3,.lb-root p,.lb-root a,.lb-root button,.lb-root input,.lb-root textarea{font-family:var(--f)}

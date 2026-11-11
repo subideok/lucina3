@@ -1,5 +1,5 @@
 <!-- LUCINA · 상단 메뉴 (home) -->
-<header class="lb-root lb-nav" data-lb-nav>
+<header class="lb-root lb-nav lb-nav--over" data-lb-nav>
   <div class="lb-wrap lb-nav__bar">
     <a class="lb-nav__logo" href="#" data-lb-link="home">LUCINA<small>루시나타로 · 루시나아카데미</small></a>
     <nav class="lb-nav__menu" id="lb-menu" aria-label="주요 메뉴">
@@ -24,27 +24,50 @@
   </div>
 </header>
 
-<!-- LUCINA B · 01 히어로 — 3D 연출 없이 아이보리 종이 바탕 + 브랜드 문장 + 입구 3개
-     문장 후보: ① 배움이 현장으로 이어지는 곳, 루시나 ② 취미로 배우고, 실제 상담으로 이어지는 타로심리 교육 ③ 선택이 어려운 게 아닙니다. 기준이 흐려진 것입니다. -->
-<section class="lb-root lb-hero" id="lb-hero" aria-labelledby="lb-hero-title">
-  <div class="lb-wrap">
-    <div class="lb-hero__top">
-    <div class="lb-hero__copy">
-    <h1 class="lb-hero__title" id="lb-hero-title">배움이 현장으로 이어지는 곳,<br>루시나 아카데미</h1>
-    <p class="lb-hero__lead">아카데미에서는 취미부터 상담·강의 수준까지 단계적으로 가르치고, 루시나타로에서는 원장과 루시나가 양성한 상담사가 중요한 선택 앞에 선 분들의 생각을 정리하도록 돕습니다.</p>
-    </div>
-    <div class="lb-hero__img lb-hero__art" aria-hidden="true">
-      <div class="lb-tc lb-tc--l"><div class="lb-tc__in"><span class="lb-tc__no">II</span><span class="lb-tc__em lb-tc__em--moon"><i></i></span><span class="lb-tc__name">THE HIGH PRIESTESS</span></div></div>
-      <div class="lb-tc lb-tc--r"><div class="lb-tc__in"><span class="lb-tc__no">XVII</span><span class="lb-tc__em lb-tc__em--line"><i></i></span><span class="lb-tc__name">THE STAR</span></div></div>
-      <div class="lb-tc lb-tc--c"><div class="lb-tc__in"><span class="lb-tc__no">XIX</span><span class="lb-tc__em lb-tc__em--sun"><i></i></span><span class="lb-tc__name">THE SUN</span></div></div>
-    </div>
-    </div>
-    <div class="lb-hb__row lb-hb__row--2">
-      <a class="lb-hb__btn lb-hb__btn--main" href="#" data-lb-link="tarot"><span><b>타로 상담</b><small>원장 상담 · 상담사 상담</small></span><i aria-hidden="true">→</i></a>
-      <a class="lb-hb__btn lb-hb__btn--acad" href="#" data-lb-link="academy"><span><b>아카데미 상담</b><small>취미부터 창업까지</small></span><i aria-hidden="true">→</i></a>
+<!-- LUCINA · 홈 · 첫 화면 영상 + 브랜드 문장 (영상은 소리 없이 자동 반복) -->
+<style>
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css');
+#lb-hero.lb-hvid{position:relative;margin:0;padding:0;background:#16121C;overflow:hidden;color:#FAF8F4;font-family:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",sans-serif}
+#lb-hero .lb-hvid__v{display:block;width:100%;height:min(94vh,900px);min-height:600px;object-fit:cover;transform:scale(1.05);animation:lbHvZoom 16s ease-out forwards}
+#lb-hero .lb-hvid__shade{position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(20,14,28,.45) 0%,rgba(20,14,28,.2) 28%,rgba(20,14,28,.45) 58%,rgba(20,14,28,.78) 100%)}
+#lb-hero .lb-hvid__in{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;padding:72px clamp(20px,5vw,64px) clamp(56px,10vh,110px);box-sizing:border-box;text-align:center}
+#lb-hero .lb-hvid__t{margin:0;font-family:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;font-size:clamp(34px,5vw,64px);font-weight:700;line-height:1.3;letter-spacing:-.035em;color:#FAF8F4;text-wrap:balance;text-shadow:0 2px 24px rgba(10,6,16,.5)}
+#lb-hero .lb-hvid__t em{font-style:normal;color:#D8C6F0}
+#lb-hero .lb-hvid__p{margin:clamp(16px,2.4vh,22px) 0 0;max-width:640px;font-family:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;font-size:clamp(15px,1.2vw,17px);font-weight:400;line-height:1.75;color:rgba(250,248,244,.86);text-wrap:pretty;text-shadow:0 1px 14px rgba(10,6,16,.5)}
+#lb-hero .lb-hvid__btns{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:clamp(28px,4.5vh,40px)}
+#lb-hero .lb-hvid__b{display:flex;align-items:center;justify-content:space-between;gap:28px;min-width:230px;min-height:66px;padding:12px 20px 12px 22px;border-radius:10px;box-sizing:border-box;font-family:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;text-align:left;text-decoration:none;transition:background .2s,border-color .2s,transform .2s}
+#lb-hero .lb-hvid__b:hover{transform:translateY(-2px)}
+#lb-hero .lb-hvid__b span{display:flex;flex-direction:column;gap:2px}
+#lb-hero .lb-hvid__b b{font-size:16px;font-weight:700}
+#lb-hero .lb-hvid__b small{font-size:12.5px;font-weight:400}
+#lb-hero .lb-hvid__b i{font-style:normal;font-size:18px;transition:transform .2s}
+#lb-hero .lb-hvid__b:hover i{transform:translateX(4px)}
+#lb-hero .lb-hvid__b--main{background:#3D2B5C;color:#FAF8F4;border:1px solid #3D2B5C}
+#lb-hero .lb-hvid__b--main small{color:#D8C6F0}
+#lb-hero .lb-hvid__b--main:hover{background:#4E3A72;border-color:#4E3A72;color:#FAF8F4}
+#lb-hero .lb-hvid__b--sub{background:#F3ECFA;color:#3D2B5C;border:1px solid #F3ECFA}
+#lb-hero .lb-hvid__b--sub small{color:#5E5868}
+#lb-hero .lb-hvid__b--sub:hover{background:#fff;border-color:#fff;color:#3D2B5C}
+#lb-hero .lb-hvid__in>*{opacity:0;transform:translateY(16px);animation:lbHvUp 1s cubic-bezier(.2,.7,.2,1) forwards}
+#lb-hero .lb-hvid__p{animation-delay:.15s}#lb-hero .lb-hvid__btns{animation-delay:.3s}
+@keyframes lbHvUp{to{opacity:1;transform:none}}
+@keyframes lbHvZoom{to{transform:scale(1)}}
+@media (max-width:640px){#lb-hero .lb-hvid__v{height:92svh;min-height:600px}#lb-hero .lb-hvid__p{font-size:14.5px}#lb-hero .lb-hvid__btns{flex-direction:column;width:100%;max-width:340px}#lb-hero .lb-hvid__b{min-width:0}}
+@media (prefers-reduced-motion:reduce){#lb-hero .lb-hvid__v,#lb-hero .lb-hvid__in>*{animation:none;opacity:1;transform:none}}
+</style>
+<section class="lb-root lb-hvid" id="lb-hero" aria-labelledby="lb-hero-title">
+  <video class="lb-hvid__v" src="assets/videos/home-hero.mp4" autoplay muted loop playsinline preload="auto" aria-hidden="true"></video>
+  <div class="lb-hvid__shade" aria-hidden="true"></div>
+  <div class="lb-hvid__in">
+    <h1 class="lb-hvid__t" id="lb-hero-title">배움이 현장으로 이어지는 곳,<br><em>루시나 아카데미</em></h1>
+    <p class="lb-hvid__p">취미부터 상담·강의까지 단계별로 배우고,<br>중요한 선택 앞에서는 루시나타로가 생각을 정리해 드립니다.</p>
+    <div class="lb-hvid__btns">
+      <a class="lb-hvid__b lb-hvid__b--main" href="#" data-lb-link="tarot"><span><b>타로 상담</b><small>원장 상담 · 상담사 상담</small></span><i aria-hidden="true">→</i></a>
+      <a class="lb-hvid__b lb-hvid__b--sub" href="#" data-lb-link="academy"><span><b>아카데미 상담</b><small>취미부터 창업까지</small></span><i aria-hidden="true">→</i></a>
     </div>
   </div>
 </section>
+
 
 <!-- LUCINA · 홈 · 루시나 소개 (원장: 상담 + 교육, 이력 전체) -->
 <section class="lb-root lb-sec lb-sec--white" id="lb-about" aria-labelledby="lb-hab-title">

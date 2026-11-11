@@ -76,7 +76,9 @@
       }, 3500);
     });
   }
-  var _init = init; init = function () { _init(); carousel(); };
+  function navOver() { d.querySelectorAll('.lb-nav--over').forEach(function (n) { n.classList.toggle('is-scrolled', (window.scrollY || d.documentElement.scrollTop) > 40); }); }
+  window.addEventListener('scroll', navOver, { passive: true });
+  var _init = init; init = function () { _init(); carousel(); navOver(); };
   window.LucinaB = { refresh: init };
   if (d.readyState !== 'loading') init(); else d.addEventListener('DOMContentLoaded', init);
 })(document);
